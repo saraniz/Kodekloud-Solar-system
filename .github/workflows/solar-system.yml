@@ -36,3 +36,9 @@ jobs:
           with:                                     #with give configuration settings for step
             name: Mocha-Test-Result
             path: test-results.xml
+
+        - name: Archive Test Results
+          uses: actions/upload-artifact@v3
+          with:
+            name: Mocha-Test-Result
+            path: test-results.xml
